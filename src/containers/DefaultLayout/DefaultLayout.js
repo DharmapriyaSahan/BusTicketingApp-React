@@ -12,7 +12,7 @@ import {
   AppSidebarForm,
   AppSidebarHeader,
   AppSidebarMinimizer,
-  AppSidebarNav,
+  AppSidebarNav, AppSidebarToggler,
 } from '@coreui/react';
 // sidebar nav config
 import navigation from '../../_nav';
@@ -25,11 +25,13 @@ import DefaultHeader from './DefaultHeader';
 class DefaultLayout extends Component {
   render() {
     return (
-      <div className="app">
-        <AppHeader fixed>
+      <div className="app" height="25%" >
+        <AppHeader fixed height="50%" >
+          <AppSidebarToggler className="d-lg-none" display="md" mobile />
+          <AppSidebarToggler className="d-md-down-none" display="lg"/>
           <DefaultHeader />
         </AppHeader>
-        <div className="app-body">
+        <div className="app-body" >
           <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />

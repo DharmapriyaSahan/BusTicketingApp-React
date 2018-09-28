@@ -182,15 +182,23 @@ const User = Loadable({
   loading: Loading,
 });
 
+const BusApplication = Loadable({
+  loader: () => import('./views/BusApplication/BusApplication'),
+  loading: Loading,
+});
 
 
-// https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
+
+
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
+  { path: '/theme/busapplication', name: 'Bus Application', component: BusApplication },
+
   { path: '/theme/typography', name: 'Typography', component: Typography },
+  { path: '/theme/busapplication', name: 'Bus Application', component: BusApplication },
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },
@@ -225,8 +233,10 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/charts', name: 'Charts', component: Charts },
+
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+
 ];
 
 export default routes;

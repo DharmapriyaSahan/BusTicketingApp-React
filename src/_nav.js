@@ -6,7 +6,7 @@ export default {
       icon: 'icon-home',
       badge: {
         variant: 'info',
-        text: 'Bus Ticketing App',
+        text: 'Bus Ticketing ',
       },
     },
     /*{
@@ -24,10 +24,16 @@ export default {
       url: '/theme/colors',
       icon: 'icon-drop',
     },
+
     {
       name: 'Typography',
       url: '/theme/typography',
       icon: 'icon-pencil',
+    },
+    {
+      name: 'BusApplication',
+      url: '/theme/busapplication',
+      icon: 'icon-star',
     },
     {
       title: true,
@@ -235,6 +241,7 @@ export default {
           url: '/login',
           icon: 'icon-star',
         },
+
         {
           name: 'Register',
           url: '/register',
