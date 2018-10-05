@@ -1,0 +1,17 @@
+.amount{
+  background-color: #909ba5;
+  width: 110%;
+  height: 205px;
+  margin-left: -15px;
+}
+
+.amount h5{
+  font-family: "Calibri";
+  font-size: 20px;
+}
+
+.amount button{
+  height: 40px;
+  color: #686b6e;
+  width: 80px;
+}

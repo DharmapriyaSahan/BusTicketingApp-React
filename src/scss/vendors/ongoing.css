@@ -1,0 +1,46 @@
+.rec{
+  margin-left: -16px;
+  margin-right: 1px;
+  width: 110%;
+  height: 120px;
+  background-color: #7d7e7f;
+  color: white;
+  margin-top: 23px;
+}
+.rec label{
+
+}
+.rec label{
+  margin-left: 25px;
+  text-align: justify;
+  font-family: "Calibri Light";
+  font-size: 18px;
+}
+
+
+.next-stop{
+  margin-left: -16px;
+  margin-right: 1px;
+  width: 110%;
+  height: 80px;
+  background-color:#909ba5 ;
+  color: white;
+  margin-top: 23px;
+}
+
+.next-stop h4{
+  font-family: "Calibri Light";
+}
+
+.previous-stop{
+  margin-left: -16px;
+  margin-right: 1px;
+  width: 110%;
+  height: 80px;
+  background-color:#7d7e7f ;
+  color: white;
+  margin-top: 23px;
+}
+.previous-stop h4{
+  font-family: "Calibri Light";
+}

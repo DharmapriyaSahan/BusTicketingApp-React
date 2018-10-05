@@ -1,7 +1,73 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import axios from "axios";
+import Base from "../../Statics.Common";
+
 
 class Login extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      UserId: '',
+      User: ''
+    }
+    localStorage.clear();
+  }
+
+
+  getUser() {
+    if ((this.username != null)) {
+      if ((this.password != null)) {
+        axios.get(Base.API1 + '/login/' + this.password + '/' + this.username).then(res => {
+          // alert(res.data.userID);
+          this.setState({
+            UserId: res.data.userID,
+            User: res.data.userName
+          })
+          alert('Successfully Logged-in!!' + this.state.UserId);
+          window.location.href = 'http://localhost:3000/';
+          localStorage.clear();
+          localStorage.setItem('userId',this.state.UserId);
+        });
+
+       // if(this.User == this.username) {
+
+
+      }
+      else
+        alert("Please fill all the fields.");
+    }
+    else
+      alert("Please fill all the fields.");
+  }
+
+
+  register() {
+
+
+    window.location.href =  'http://localhost:3000/#/register';
+
+  }
+
+  setToNull() {
+    this.username = null;
+    this.password = null;
+  }
+
+    onunChange(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.username = event.target.value;
+  }
+  onpwChange(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.password = event.target.value;
+  }
+
   render() {
     return (
       <div className="app flex-row align-items-center">
@@ -20,7 +86,7 @@ class Login extends Component {
                             <i className="icon-user"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="text" placeholder="Username" autoComplete="username" />
+                        <Input type="text" placeholder="Username" id="un" autoComplete="username" onChange={event => this.onunChange(event)}/>
                       </InputGroup>
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
@@ -28,11 +94,15 @@ class Login extends Component {
                             <i className="icon-lock"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="password" placeholder="Password" autoComplete="current-password" />
+                        <Input type="password" placeholder="Password" id="un" autoComplete="current-password" onChange={event => this.onpwChange(event)}/>
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button color="primary" className="px-4">Login</Button>
+                          <Button color="primary" className="px-4"  onClick={()=>{this.getUser()}}>Login</Button>
+
+
+
+
                         </Col>
                         <Col xs="6" className="text-right">
                           <Button color="link" className="px-0">Forgot password?</Button>
@@ -40,18 +110,17 @@ class Login extends Component {
                       </Row>
                     </Form>
                   </CardBody>
-                </Card>
-                <Card className="text-white bg-primary py-5 d-md-down-none" style={{ width: 44 + '%' }}>
+
                   <CardBody className="text-center">
                     <div>
                       <h2>Sign up</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                      <Button color="primary" className="mt-3" active>Register Now!</Button>
+                      <p>To register with Bus Ticketing App Click, Register Now.!</p>
+                      <Button color="primary" className="mt-3" active  onClick={()=>{this.register()}}>Register Now!</Button>
                     </div>
                   </CardBody>
                 </Card>
               </CardGroup>
+
             </Col>
           </Row>
         </Container>
