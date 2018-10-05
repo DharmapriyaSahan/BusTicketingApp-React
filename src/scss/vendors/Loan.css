@@ -1,0 +1,105 @@
+.rec{
+  margin-left: -30px;
+  width: 121%;
+  height: 150px;
+  background-color: #7d7e7f;
+  color: white;
+}
+
+.rec-2{
+  margin-left: -30px;
+  width: 121%;
+  height: 100px;
+  background-color: #7d7e7f;
+  color: white;
+
+}
+
+.rec-2 h5{
+  margin-left: 25px;
+  text-align: justify;
+}
+
+.rec-2 label{
+  font-size: 20px;
+
+}
+
+.rec h6{
+  margin-left: 25px;
+  text-align: justify;
+}
+
+.rec h7{
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: justify;
+}
+
+.rec-label{
+  float: right;
+  margin-right: 35px;
+}
+
+.code-button{
+  float: right;
+}
+
+.rec-text{
+  margin-top: 15px;
+  margin-left: -30px;
+  font-size: 12px;
+  width: 121%;
+  margin-bottom: 65px;
+}
+
+.rec-text Input{
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.rec-text Button{
+  background-color:#23282c ;
+  color: white;
+}
+
+.error{
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.err-pin{
+  margin-left: 112px;
+
+  font-size: 12px;
+}
+
+.rec-pin{
+  margin-left: -30px;
+  width: 121%;
+  height: 130px;
+  background-color: #D3D3D3;
+  color: #23282c;
+}
+
+.rec-pin p{
+  margin-left: 8px;
+  padding-top: 10px;
+
+}
+
+.rec-pin Input{
+  width: 30%;
+  margin-left: 120px;
+  border-color: #23282c;
+  text-align: center;
+}
+
+.pro-button{
+  margin-top: 8px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 80%;
+  background-color:#23282c ;
+  color: white;
+}
