@@ -1,4 +1,5 @@
 export default {
+
   items: [
     {
       name: 'Home',
@@ -9,6 +10,7 @@ export default {
         text: 'Bus Ticketing App',
       },
     },
+
     /*{
       title: true,
       name: 'Theme',
@@ -111,6 +113,7 @@ export default {
           name: 'Tables',
           url: '/base/tables',
           icon: 'icon-puzzle',
+
         },
         {
           name: 'Tabs',
@@ -134,6 +137,8 @@ export default {
           url: '/buttons/buttons',
           icon: 'icon-cursor',
         },
+
+
         {
           name: 'Button dropdowns',
           url: '/buttons/button-dropdowns',

@@ -5,6 +5,7 @@ import DefaultLayout from './containers/DefaultLayout';
 
 function Loading() {
   return <div>Loading...</div>;
+
 }
 
 const Breadcrumbs = Loadable({
@@ -112,12 +113,24 @@ const Buttons = Loadable({
   loading: Loading,
 });
 
+const Loan = Loadable({
+  loader: () => import('./views/Buttons/Loan/Loan'),
+  loading: Loading,
+});
+
+const Recharge = Loadable({
+  loader: () => import('./views/Buttons/Recharge/Recharge'),
+  loading: Loading,
+});
+
+
 const Charts = Loadable({
   loader: () => import('./views/Charts'),
   loading: Loading,
 });
 
 const Dashboard = Loadable({
+
   loader: () => import('./views/Dashboard'),
   loading: Loading,
 });
@@ -211,6 +224,8 @@ const routes = [
   { path: '/base/tooltips', name: 'Tooltips', component: Tooltips },
   { path: '/buttons', exact: true, name: 'Buttons', component: Buttons },
   { path: '/buttons/buttons', name: 'Buttons', component: Buttons },
+  { path: '/buttons/Loan', name: 'Loan', component: Loan },
+  { path: '/buttons/Recharge', name: 'Recharge', component: Recharge },
   { path: '/buttons/button-dropdowns', name: 'Button Dropdowns', component: ButtonDropdowns },
   { path: '/buttons/button-groups', name: 'Button Groups', component: ButtonGroups },
   { path: '/buttons/brand-buttons', name: 'Brand Buttons', component: BrandButtons },
@@ -227,6 +242,7 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+
 ];
 
 export default routes;
