@@ -18,7 +18,7 @@ import {
   Tooltips,
 } from './Base';
 
-import { ButtonDropdowns, ButtonGroups, Buttons, BrandButtons } from './Buttons';
+import { ButtonDropdowns, ButtonGroups, Buttons, Recharge,BrandButtons } from './Buttons';
 import Charts from './Charts';
 import Dashboard from './Dashboard';
 import { CoreUIIcons, Flags, FontAwesome, SimpleLineIcons } from './Icons';
@@ -46,6 +46,7 @@ export {
   ButtonGroups,
   BrandButtons,
   Buttons,
+  Recharge,
   Tooltips,
   Tabs,
   Tables,

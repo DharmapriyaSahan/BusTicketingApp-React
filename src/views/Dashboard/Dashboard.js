@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
+import HomePage from '../../containers/DefaultLayout/HomePage';
+
 import {
   Badge,
   Button,
@@ -479,89 +481,13 @@ class Dashboard extends Component {
   render() {
 
     return (
+
       <div className="animated fadeIn">
 
+        <Row>
+          <HomePage />
 
-        <div id="page-wrapper">
-
-          <div className="row">
-            <div className="col-lg-12">
-              <h1 className="page-header">In Patient Registration</h1>
-            </div>
-
-          </div>
-          <form role="form" onSubmit={event => this.onSubmit(event)}>
-            <div className="col-lg-6">
-
-              <div className="form-group">
-                <label>Admission Number *</label>
-                <input className="form-control" onChange={event => this.onadmissionnoChange(event)}/>
-              </div>
-
-              <div className="form-group">
-                <label>Patient Name *</label>
-                <input className="form-control" onChange={event => this.onnameChange(event)}/>
-              </div>
-
-              <div className="form-group">
-                <label>Age</label>
-                <input type="number" className="form-control" onChange={event => this.onAgeChange(event)}/>
-              </div>
-
-              <div className="form-group">
-                <label>Gender</label>
-                <select className="form-control" onChange={event => this.onRadiochange(event)}>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label>Diet</label>
-                <select className="form-control" onChange={event => this.ondietChange(event)}>
-                  <option>Normal</option>
-                  <option>Light diet</option>
-                  <option>Light diet & no sugar</option>
-                  <option>Liquid</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label>Room Number</label>
-                <input className="form-control" onChange={event => this.onroomnoChange(event)}/>
-              </div>
-
-
-            </div>
-            <div className="col-lg-6">
-              <div className="form-group">
-                <label>Consultant Name</label>
-                <input className="form-control" onChange={event => this.onconsultantChange(event)}/>
-              </div>
-
-              <div className="form-group">
-                <label>Surgeon Name</label>
-                <input className="form-control" onChange={event => this.onsurgeonNameChange(event)}/>
-              </div>
-
-              <div className="form-group">
-                <label>Medical Condition</label>
-                <textarea className="form-control" rows="3"
-                          onChange={event => this.onMedicalCondChange(event)}></textarea>
-              </div>
-
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <div className="form-group">
-                <button type="submit" className="btn btn-primary">Add Details</button>
-              </div>
-
-            </div>
-          </form>
-        </div>
-
+        </Row>
 
 
 
@@ -570,6 +496,7 @@ class Dashboard extends Component {
 
       </div>
     );
+
   }
 }
 

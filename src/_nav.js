@@ -1,4 +1,5 @@
 export default {
+
   items: [
     {
       name: 'Home',
@@ -9,6 +10,7 @@ export default {
         text: 'Bus Ticketing ',
       },
     },
+
     {
       name: 'Colors',
       url: '/theme/colors',
@@ -112,6 +114,7 @@ export default {
           name: 'Tables',
           url: '/base/tables',
           icon: 'icon-puzzle',
+
         },
         {
           name: 'Tabs',
@@ -135,6 +138,8 @@ export default {
           url: '/buttons/buttons',
           icon: 'icon-cursor',
         },
+
+
         {
           name: 'Button dropdowns',
           url: '/buttons/button-dropdowns',
