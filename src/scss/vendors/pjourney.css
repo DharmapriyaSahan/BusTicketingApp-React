@@ -1,0 +1,33 @@
+.journey-amount{
+background-color: #909ba5;
+  height: 100px;
+
+
+}
+
+.journey-amount h5{
+  font-family: "Calibri";
+  font-size: 19px;
+  font-color: rgba(0, 0, 0, 0);
+}
+
+.journey-amount button{
+  width: 80px;
+  height:40px;
+  color: #686b6e;
+}
+
+
+.journey-details-1{
+  height: 110px;
+  background-color: #909ba5;
+  font-family: "Calibri";
+  font-size: 20px;
+}
+
+.journey-details-2{
+  background-color: #909ba5;
+  height: 100px;
+  font-family: "Calibri";
+  font-size: 20px;
+}

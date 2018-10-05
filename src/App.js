@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter , HashRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 // Styles
 // CoreUI Icons Set
@@ -15,23 +15,46 @@ import './scss/style.css'
 
 // Containers
 import { DefaultLayout } from './containers';
+import  Login from './views/Pages/Login/Login';
 // Pages
-import { Login, Page404, Page500, Register } from './views/Pages';
+import {  Page404, Page500, Register } from './views/Pages';
+import BusApplication from "./views/BusApplication/BusApplication";
 
 // import { renderRoutes } from 'react-router-config';
+
+
+
+// <Route path="/" name="Home" component={DefaultLayout} />
+
+ /*
+    <HashRouter>
+        <Switch>
+          <Route exact path="/login" name="Login Page" component={Login} />
+          <Route exact path="/busapplication" name="Bus Application" component={BusApplication} />
+          <Route exact path="/register" name="Register Page" component={Register} />
+          <Route exact path="/404" name="Page 404" component={Page404} />
+          <Route exact path="/500" name="Page 500" component={Page500} />
+          <Route path="/" name="Login" component={DefaultLayout} />
+        </Switch>
+      </HashRouter>
+  */
+
 
 class App extends Component {
   render() {
     return (
+
       <HashRouter>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
+          <Route exact path="/busapplication" name="Bus Application" component={BusApplication} />
           <Route exact path="/register" name="Register Page" component={Register} />
           <Route exact path="/404" name="Page 404" component={Page404} />
           <Route exact path="/500" name="Page 500" component={Page500} />
-          <Route path="/" name="Home" component={DefaultLayout} />
+          <Route path="/" name="Login" component={DefaultLayout} />
         </Switch>
       </HashRouter>
+
     );
   }
 }

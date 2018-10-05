@@ -1,0 +1,23 @@
+.tbl{
+  border-width: 2px;
+  font-size: 13px;
+  width: 114%;
+  margin-left: -25px;
+
+}
+
+.tbl tr{
+
+  padding-left: 10px;
+  background-color: #0a3544;
+  color: white;
+}
+
+.tbl th{
+  width: 80px;
+  font-family: "Calibri Light";
+  font-size: 15px;
+}
+.tbl td{
+  background-color: #7d7e7f;
+}

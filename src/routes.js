@@ -3,6 +3,7 @@ import Loadable from 'react-loadable'
 
 import DefaultLayout from './containers/DefaultLayout';
 
+
 function Loading() {
   return <div>Loading...</div>;
 
@@ -195,15 +196,36 @@ const User = Loadable({
   loading: Loading,
 });
 
+const BusApplication = Loadable({
+  loader: () => import('./views/BusApplication/BusApplication'),
+  loading: Loading,
+});
+const Login = Loadable({
+  loader: () => import('./views/Pages/Login'),
+  loading: Loading,
+});
+const OngoingJourney = Loadable({
+  loader: () => import('./views/su/OngoingJourney'),
+  loading: Loading,
+});
+const JourneyHistory = Loadable({
+  loader: () => import('./views/su/JourneyHistory'),
+  loading: Loading,
+});
 
 
-// https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
+
 const routes = [
-  { path: '/', exact: true, name: 'Home', component: DefaultLayout },
+  { path: '/', exact: true, name: 'Login', component: Dashboard },
+  { path: '/home', name: 'Home Page', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
+  { path: '/theme/ongoingjourney', name: 'Ongoing Journey', component: OngoingJourney },
+  { path: '/theme/journeyhistory', name: 'Journey History', component: JourneyHistory },
+
   { path: '/theme/typography', name: 'Typography', component: Typography },
+  { path: '/theme/busapplication', name: 'Bus Application', component: BusApplication },
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },
@@ -240,6 +262,7 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/charts', name: 'Charts', component: Charts },
+
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
 

@@ -1,0 +1,24 @@
+.balance{
+  background-color: #909ba5;
+  margin-left: -15px;
+  height: 130px;
+  width: 110%;
+}
+
+.balance label{
+  font-size: 13px;
+}
+
+.location{
+  background-color: #686b6e;
+  margin-left: -15px;
+  height: 80px;
+  width: 110%;
+}
+
+.time{
+  background-color: #909ba5;
+  margin-left: -15px;
+  height: 80px;
+  width: 110%;
+}
